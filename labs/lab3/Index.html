@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вариант 2. Машины</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <h1>Вариант 2. Машины</h1>
+    <p id="intro" class="lead"></p>
+
+    <!-- ОДИНОЧНЫЙ РАСЧЁТ -->
+    <section class="card">
+      <h2>Одиночный расчёт</h2>
+      <div class="range-wrap">
+        <label for="fuel" class="range-label">
+          Выберите количество литров бензина:
+          <output id="fuelOut">20</output> л
+        </label>
+        <input id="fuel" class="range" type="range" min="0" max="80" step="1" value="20" />
+        <p class="hint">Расход на 100 км: мотоцикл — 5 л, машина — 10 л.</p>
+      </div>
+
+      <div class="grid">
+        <button id="motoBtn" class="btn" type="button">
+          <img src="moto.png" alt="Мотоцикл" class="icon" />
+          <span>Мотоцикл</span>
+        </button>
+        <button id="carBtn" class="btn" type="button">
+          <img src="car.png" alt="Машина" class="icon" />
+          <span>Машина</span>
+        </button>
+      </div>
+
+      <div id="status" class="status" aria-live="polite"></div>
+
+      <!-- Смайлик скрыт до первого расчёта -->
+      <div id="result" class="result" hidden>
+        <img id="smiley" alt="Смайлик" class="smiley" hidden />
+        <div>
+          <div id="resultTitle" class="result-title"></div>
+          <div id="resultText" class="result-text"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- НЕСКОЛЬКО ПОЛЬЗОВАТЕЛЕЙ -->
+    <section class="card">
+      <h2>Несколько пользователей</h2>
+      <p class="hint">Заполни строки и нажми «Рассчитать всем».</p>
+
+      <div class="controls">
+        <button id="addRow" type="button" class="small-btn">Добавить строку</button>
+        <button id="calcAll" type="button" class="small-btn primary">Рассчитать всем</button>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Имя</th>
+              <th>Литры</th>
+              <th>Транспорт</th>
+              <th>Дистанция (км)</th>
+              <th>Результат</th>
+            </tr>
+          </thead>
+          <tbody id="userRows">
+            <tr>
+              <td><input type="text" class="name" placeholder="Иван" /></td>
+              <td><input type="number" class="liters" min="0" step="1" value="20" /></td>
+              <td>
+                <select class="vehicle">
+                  <option value="moto">Мотоцикл</option>
+                  <option value="car">Машина</option>
+                </select>
+              </td>
+              <td><input type="number" class="distance" min="1" step="1" value="120" /></td>
+              <td class="out"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

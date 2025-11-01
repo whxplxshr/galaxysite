@@ -1,0 +1,49 @@
+  <!-- Основной контент страницы -->
+  <main>
+    <div class="assignment-wrapper">
+      <h1>Задание: Рисунок с использованием чистого CSS</h1>
+      
+      <h2>Описание задачи</h2>
+      <p>
+        В рамках данного задания была поставлена цель создать статическое изображение, используя исключительно возможности HTML и CSS, без применения JavaScript или графических файлов. Этот метод, известный как "CSS Art", позволяет продемонстрировать глубокое понимание свойств CSS, таких как позиционирование, трансформации, градиенты и псевдоэлементы. Задача требовала не только технической точности в воссоздании объектов, но и творческого подхода к композиции и цветовой палитре.
+      </p>
+      <img src="H:\web prog\galaxy site\pics\2.png" alt="Пример галактики" style="width:100%; border-radius:10px; margin-bottom: 20px;">
+      <p>
+        Создание сложных форм, таких как чайник или изгибы стульев, требует комбинирования множества `div`-элементов, каждый из которых стилизуется для формирования части общего изображения. Например, для создания закругленных поверхностей активно использовалось свойство `border-radius`. Тени и объем достигались с помощью `box-shadow` и линейных градиентов (`linear-gradient`). Этот проект является отличной практикой для оттачивания навыков работы с визуальными аспектами CSS и развивает внимание к деталям.
+      </p>
+
+      <h2>Результат выполнения</h2>
+      <div class="assignment-container">
+        <!-- Твой оригинальный код рисунка -->
+        <div id="canvas">
+          <div id="frame"></div>
+          <div id="artwork">
+            <div id="lace"></div>
+            <div id="inner-canvas">
+              <div id="star"></div>
+              <div id="kettle-body"></div>
+              <div id="kettle-lid"></div>
+              <div id="kettle-knob"></div>
+              <div id="kettle-spout"></div>
+              <div id="kettle-handle"></div>
+            </div>
+          </div>
+          <div id="table">
+            <div id="table-top"></div>
+            <div id="table-leg"></div>
+            <div id="table-base"></div>
+          </div>
+          <div id="chair-left">
+            <div id="backrest-left"></div>
+            <div id="seat-left"></div>
+            <div id="leg-left"></div>
+          </div>
+          <div id="chair-right">
+            <div id="backrest-right"></div>
+            <div id="seat-right"></div>
+            <div id="leg-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

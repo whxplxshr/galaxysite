@@ -1,0 +1,162 @@
+:root { --S: 200px; }
+* { box-sizing: border-box; }
+body { margin:0; height:100vh; display:grid; place-items:center; background:#f3f5f9; }
+
+/* Контейнер 200×200 */
+.pic {
+  position:relative;
+  width:var(--S); height:var(--S);
+  border:1px solid #000;
+  background:#aeb98b; /* зелёный фон */
+  overflow:hidden;
+}
+
+/* ---------- Картина в кружевной рамке ---------- */
+.lace{
+  position:absolute; left:32px; top:16px;
+  width:136px; height:112px;
+  background:
+    radial-gradient(circle, #fff 0 9px, transparent 10px) top left/18px 18px repeat-x,
+    radial-gradient(circle, #fff 0 9px, transparent 10px) bottom left/18px 18px repeat-x,
+    radial-gradient(circle, #fff 0 9px, transparent 10px) top left/18px 18px repeat-y,
+    radial-gradient(circle, #fff 0 9px, transparent 10px) top right/18px 18px repeat-y;
+}
+.canvas{
+  position:absolute; inset:10px;
+  border:8px solid #fff; border-radius:6px;
+  background:
+    radial-gradient(120px 90px at 35% 35%, rgba(255,255,255,.75), rgba(255,255,255,0) 70%) no-repeat,
+    linear-gradient(#77a8ff, #5c90e8 50%, #3f72c5 100%);
+  overflow:hidden;
+}
+.sun{
+  position:absolute; right:-14px; top:-14px;
+  width:60px; height:60px; border-radius:50%;
+  background: radial-gradient(circle at 40% 40%, #fff6a6 0 40%, #ffd84e 55%, #ffcc33 70% 100%);
+}
+
+/* ================== НОВЫЙ ЧАЙНИК ================== */
+.pot{ position:absolute; border-radius:50%; }
+
+/* корпус */
+.pot-base{
+  width:92px; height:92px; left:22px; bottom:6px;
+  background:
+    radial-gradient(circle at 34% 30%, #fff2f2 0 18%, transparent 19%),
+    radial-gradient(circle at 42% 42%, #ffd2d6 0 40%, #ff9aa0 58%, #e34a49 78%, #b92f2f 100%);
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,.14));
+}
+.pot-base::before{ /* блик */
+  content:""; position:absolute; left:18px; top:16px; width:42px; height:30px;
+  background: radial-gradient(circle, rgba(255,255,255,.9) 0 60%, rgba(255,255,255,0) 65%);
+  border-radius:50%;
+  filter: blur(1px); opacity:.9;
+}
+
+/* крышка */
+.pot-top{
+  width:50px; height:42px; left:50px; bottom:54px;
+  border-radius:50%/60% 60% 40% 40%;
+  background:
+    radial-gradient(circle at 45% 35%, #ffe2e3 0 45%, #ff9aa0 60%, #d63b38 95%);
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,.06);
+}
+.pot-top::after{ /* кромка крышки */
+  content:""; position:absolute; left:8px; right:8px; bottom:3px; height:8px;
+  background: linear-gradient(#eaa36f, #c8773c);
+  border-radius:50%;
+  opacity:.8;
+}
+
+/* кнопка на крышке */
+.knob{
+  position:absolute; left:70px; bottom:88px;
+  width:12px; height:12px; border-radius:50%;
+  background: radial-gradient(circle at 40% 35%, #ffe7e7 0 45%, #de4941 100%);
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+
+/* носик — более вытянутый и «каплевидный» */
+.spout{
+  position:absolute; left:18px; bottom:58px;
+  width:58px; height:20px;
+  background: linear-gradient(#ff6e6e, #e34945);
+  clip-path: polygon(0 45%, 28% 15%, 74% 0, 100% 24%, 100% 76%, 74% 100%, 28% 85%, 0 55%);
+  border-radius:12px;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.15));
+}
+.spout::before{ /* сглаживание у корпуса */
+  content:""; position:absolute; left:-6px; top:2px; width:12px; height:12px;
+  background:#e34945; border-radius:50%;
+}
+
+/* ручка — ровное кольцо с прорезью */
+.handle{
+  position:absolute; right:28px; bottom:52px;
+  width:44px; height:44px; border-radius:50%;
+  background:
+    radial-gradient(farthest-side, transparent calc(100% - 8px), #c04537 0 100%);
+}
+.handle::after{ /* делаем «пропил» для соединения с корпусом */
+  content:""; position:absolute; left:-6px; top:12px; width:18px; height:20px;
+  background:#aeb98b; border-radius:50%;
+  transform: rotate(-8deg);
+}
+
+/* ================== СТОЛ ================== */
+.table { position:absolute; left:80px; bottom:32px; width:40px; }
+.bridge{
+  position:absolute; top:-18px; left:-35px; width:110px; height:10px;
+  background:#d98a45; border-radius:6px;
+}
+.stem{
+  position:absolute; top:-8px; left:8px; width:24px; height:72px;
+  background: radial-gradient(circle at 50% 20%, #eda66a 0 30%, #d27a3a 70%, #b46123 100%);
+  border-radius:40% 40% 50% 50%/55% 55% 45% 45%;
+}
+.foot{
+  position:absolute; bottom:-28px; left:-12px; width:64px; height:36px;
+  background:#c7702f;
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+/* ================== СТУЛЬЯ ================== */
+.chair{ position:absolute; bottom:16px; width:84px; height:132px; }
+.left { left:6px; }
+.right { right:6px; transform: scaleX(-1); } /* зеркалим правую */
+
+/* НОВАЯ СПИНКА — из двух тонких изогнутых «реек» */
+.chair .back{
+  position:absolute; left:4px; bottom:20px; width:76px; height:116px;
+}
+.chair .back::before, .chair .back::after{
+  content:""; position:absolute; inset:0;
+  border-radius:92% 80% 0 0 / 100% 100% 0 0;
+  border-left:10px solid #b86b2c;      /* внешняя рейка */
+  border-top:10px solid #b86b2c;
+  border-right:0; border-bottom:0;
+  transform: translateX(-10px) rotate(-7deg);
+}
+.chair .back::after{                    /* внутренняя тонкая рейка-блеск */
+  inset:10px 0 0 10px;
+  border-left:6px solid rgba(255,255,255,.18);
+  border-top:6px solid rgba(255,255,255,.18);
+  transform: translateX(-10px) rotate(-7deg);
+}
+
+/* сиденье и ножка как были */
+.chair .seat{
+  position:absolute; left:20px; bottom:40px; width:52px; height:16px;
+  background:
+    radial-gradient(circle, #6a3712 0 3px, transparent 4px) 10px 50%/16px 16px no-repeat,
+    radial-gradient(circle, #6a3712 0 3px, transparent 4px) 26px 50%/16px 16px no-repeat,
+    radial-gradient(circle, #6a3712 0 3px, transparent 4px) 42px 50%/16px 16px no-repeat,
+    #c77433;
+  border-radius:3px;
+  box-shadow:0 2px 0 rgba(0,0,0,.15);
+}
+.chair .leg{
+  position:absolute; left:36px; bottom:0; width:10px; height:40px;
+  background:#b86b2c;
+}

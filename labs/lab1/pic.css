@@ -1,0 +1,243 @@
+#canvas {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(174, 185, 139);
+}
+
+#frame {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+#artwork {
+  position: absolute;
+  left: 40px;
+  top: 16px;
+  width: 110px;
+  height: 100px;
+}
+
+#lace {
+  position: absolute;
+  inset: -9px;
+  background:
+    radial-gradient(circle 9px at 9px 18px, transparent 5px, #fff 7px 9px, transparent 9px) left 0 top -9px / 18px 18px repeat-x,
+    radial-gradient(circle 9px at 18px 9px, transparent 5px, #fff 7px 9px, transparent 9px) left -9px top 0 / 18px 18px repeat-y,
+    radial-gradient(circle 9px at 0px 9px, transparent 5px, #fff 7px 9px, transparent 9px) right -9px top 0px / 18px 18px repeat-y;
+}
+
+#inner-canvas {
+  overflow: hidden;
+  position: absolute;
+  inset: 0px;
+  border: 5px solid #fff;
+  border-radius: 6px;
+  background:
+    radial-gradient(120px 90px at 35% 35%, rgba(255,255,255,.75), rgba(255, 255, 255, 0) 70%) no-repeat,
+    linear-gradient(#77a8ff, #5c90e8 50%, #3f72c5 100%);
+}
+
+#star { 
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: -6px;
+  right: -6px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 40%, #fff6a6 0 35%, #ffd84e 55%, #ffcc33 75%, #f5b400 100%);
+  box-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+
+#kettle-lid {
+  position: absolute;  z-index: 2;
+  left: 26px;
+  bottom: 38px;
+  width: 40px;
+  height: 27px;
+  border-radius: 50% / 65% 65% 35% 35%;
+  background:
+    radial-gradient(circle at 30% 28%, #f3cccd 0 25%, #f78e95 60%, #d33331 95%);
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,.08);
+}
+
+#kettle-body {
+  position: absolute;  z-index: 3;
+  left: 20px;
+  bottom: 10px;
+  width: 52px;
+  height: 45px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 30%, #ffe6e6 0 28%, #ff9aa0 48%, #e34a49 68%, #b92f2f 100%);
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,.08);
+}
+
+#kettle-knob {
+  position: absolute; z-index: 1;
+  left: 41px;
+  bottom: 60px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 35%, #ec7272 0 45%, #de4941 100%);
+  box-shadow: 0 1px 0 rgba(0,0,0,.12);
+}
+
+#kettle-spout {
+  position: absolute;
+  left: 8px;
+  bottom: 41px;
+  width: 23px;
+  height: 7px;
+  background: linear-gradient(#ff6e6e, #e34945);
+  transform: rotate(30deg);
+  z-index: 2;
+}
+
+#kettle-handle {
+  position: absolute;
+  right: 22px;
+  bottom: 28px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, transparent calc(100% - 3px), #c04537 0 100%);
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+
+#table {
+  position: absolute;
+  left: 44px;
+  bottom: 12px;
+  width: 101px;
+  height: 86px;
+}
+
+#table-top {
+  position: top center;
+  width: 101px;
+  height: 10px;
+  background: #ce7e15;
+  box-shadow: 0 1px 0 rgba(0,0,0,.12);
+  z-index: 3;
+}
+
+#table-leg {
+  position: absolute;
+  top: 0px;
+  left: 39px;
+  width: 24px;
+  height: 72px;
+  background: #ce7e15;
+  border-radius: 40% 40% 50% 50% / 55% 55% 45% 45%;
+  z-index: 1;
+}
+
+#table-base {
+  position: absolute;
+  left: 32px;
+  bottom: 0px;
+  width: 40px;
+  height: 26px;
+  background: #ce7e15;
+  clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+#chair-left {
+  position: absolute;
+  left: 6px;
+  bottom: 16px;
+  width: 44px;
+  height: 96px;
+}
+
+#backrest-left {
+  inset: -20px;
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  height: 100px;
+  border-left: none;
+  border-top: none;
+  border-right: 4px solid #b86b2c;
+  border-bottom: 0;
+  border-radius: 80px 80px 80px 0;
+}
+
+#seat-left {
+  position: absolute;
+  left: 20px;
+  bottom: 40px;
+  width: 40px;
+  height: 8px;
+  background:
+    radial-gradient(circle, #6a3712 0 2px, transparent 2px) 3px 50%/16px 16px no-repeat,
+    radial-gradient(circle, #6a3712 0 2px, transparent 2px) 12px 50%/16px 16px no-repeat,
+    radial-gradient(circle, #6a3712 0 2px, transparent 2px) 21px 50%/16px 16px no-repeat,
+    #c77433;
+  z-index: 2;
+}
+
+#leg-left {
+  position: absolute;
+  left: 48px;
+  bottom: 0;
+  width: 6px;
+  height: 42px;
+  background: #b86b2c;
+  z-index: 1;
+}
+
+#chair-right {
+  position: absolute;
+  right: 6px;
+  bottom: 16px;
+  width: 84px;
+  height: 132px;
+}
+
+#backrest-right {
+  position: absolute;
+  inset: -20px;
+  left: 60px;
+  top: 35px;
+  height: 100px;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 4px solid #b86b2c;
+  border-radius: 80px 80px 0 80px;
+}
+
+#seat-right {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  width: 40px;
+  height: 8px;
+  background:
+    radial-gradient(circle, #6a3712 0 2px, transparent 2px) 3px 50%/16px 16px no-repeat,
+    radial-gradient(circle, #6a3712 0 2px, transparent 2px) 12px 50%/16px 16px no-repeat,
+    radial-gradient(circle, #6a3712 0 2px, transparent 2px) 21px 50%/16px 16px no-repeat,
+    #c77433;
+  z-index: 2;
+}
+
+#leg-right {
+  position: absolute;
+  right: 48px;
+  bottom: 0;
+  width: 6px;
+  height: 42px;
+  background: #b86b2c;
+  z-index: 1;
+}
