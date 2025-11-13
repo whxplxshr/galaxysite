@@ -3,116 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Задание: CSS Рисунок - Космос Эксплорер</title>
-  
-
-  <!-- 1. Подключаем основной стиль проекта -->
-  <link rel="stylesheet" href="H:\web prog\galaxy site\style.css"> 
-  
+   <title>Задание: CSS рисунок — Космос Эксплорер</title>
+     <!-- Основные стили проекта -->
   <link rel="stylesheet" href="../../style.css">
-
-  <!-- 2. Подключаем локальный стиль задания -->
+   <!-- Локальные стили лабораторной -->
   <link rel="stylesheet" href="styles.css">
 
   <style>
     /* Стили для красивого оформления контента задания */
-    body {
-        /* Фон берется из основного style.css, эта строка для подстраховки */
-        background-color: #0b0f19;
+
+
+    main {
+      padding: 120px 0 60px;
     }
-    .assignment-wrapper {
+     .assignment-wrapper {
         padding: 40px 20px;
-        max-width: 1200px;
-        margin: 40px auto;
-        background: rgba(10, 20, 40, 0.7);
-        border-radius: 10px;
-        color: #ddd;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(10, 20, 40, 0.7);
+      border-radius: 10px;
+      color: #ddd;
     }
-    .assignment-wrapper h1, .assignment-wrapper h2 {
-        color: #00c8ff;
+    
+    .assignment-wrapper h1,
+    .assignment-wrapper h2 {
+      color: #00c8ff;
     }
     .assignment-wrapper p {
         line-height: 1.7;
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
+
     .assignment-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-        border: 1px solid #2a3a5a;
-        border-radius: 10px;
-        background: #050a1a;
-        margin-top: 30px;
-        overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid #2a3a5a;
+      border-radius: 10px;
+      background: #050a1a;
+      margin-top: 30px;
+      overflow: hidden;
     }
   </style>
 </head>
 
-
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <!-- CSS Logo -->
-                <div class="logo-wrapper">
-                    <div class="logo">
-                        <div class="planet"></div>
-                        <div class="ring"></div>
-                    </div>
-                    <span class="logo-text">Космос Эксплорер</span>
-                </div>
-                
-
-                <!-- Mobile Menu Toggle -->
-                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-
-                <!-- Navigation -->
-                <nav class="nav" id="mainNav">
-                    <ul class="nav-list">
-                        <li><a href="#home" class="nav-link">Главная</a></li>
-                        <li><a href="#about" class="nav-link">О космосе</a></li>
-                        <li><a href="#missions" class="nav-link">Миссии</a></li>
-                        <li><a href="#solar-system" class="nav-link">Солнечная система</a></li>
-                        <li><a href="#assignments" class="nav-link">Задания</a></li>
-                    </ul>
-                </nav>
-            </div>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- CSS Logo -->
+        <div class="logo-wrapper">
+          <div class="logo">
+            <div class="planet"></div>
+            <div class="ring"></div>
+          </div>
+          <span class="logo-text">Космос Эксплорер</span>
         </div>
-    </header>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
+        <!-- Navigation -->
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a href="../../index.html#home" class="nav-link">Главная</a></li>
+            <li><a href="../../index.html#about" class="nav-link">О космосе</a></li>
+            <li><a href="../../index.html#missions" class="nav-link">Миссии</a></li>
+            <li><a href="../../index.html#solar-system" class="nav-link">Солнечная система</a></li>
+            <li><a href="../../index.html#assignments" class="nav-link">Задания</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
   <!-- Основной контент страницы -->
   <main>
     <div class="assignment-wrapper">
       <h1>Задание: Рисунок с использованием чистого CSS</h1>
       
+      <article class="lab-essay">
+        <h2>Эссе для Лабораторной работы №3: Создание интерактивной анимации на чистом CSS</h2>
+        
+        <p>Данный проект является синтезом художественного подхода и интерактивности, достигая сложного анимированного поведения без единой строчки JavaScript. В этой работе мы создали живую, многослойную сцену, которая реагирует на действия пользователя, используя исключительно декларативную мощь CSS. Задача состояла в том, чтобы продемонстрировать, как современные возможности CSS, такие как псевдоклассы, ключевые кадры анимации и трансформации, позволяют создавать сложные и производительные визуальные эффекты, которые ранее были прерогативой скриптовых языков. В результате получилась небольшая интерактивная история, рассказанная средствами стилей.</p>
+        
+        <p>Фундаментом всей интерактивности служат псевдоклассы <code>:hover</code> и <code>:active</code>. Они выступили в роли бесшумных обработчиков событий. Логика была построена на каскадности: при наведении курсора на основной контейнер сцены, <code>.scene:hover</code>, мы активировали стили для его дочерних элементов. Например, правило <code>.scene:hover .cloud</code> применяло анимацию к облакам, заставляя их двигаться. Это позволило создать сложную цепочку зависимостей, где одно действие пользователя запускает целую серию скоординированных визуальных изменений. Таким образом, мы добились интерактивного поведения, описав лишь желаемые конечные состояния, а браузер взял на себя всю работу по их плавной смене.</p>
+        
+        <p>Сердцем анимации стали правила <code>@keyframes</code>. Они позволили нам срежиссировать сложные сценарии движения, разбив их на ключевые кадры. Для убегающей лисы была создана анимация <code>runAway</code>, которая описывала ее полный путь. В начальном кадре (<code>0%</code>) лиса находилась в своей исходной позиции с нормальным размером и полной непрозрачностью. В конечном кадре (<code>100%</code>) ей были заданы новые координаты за пределами сцены, нулевой масштаб (<code>transform: scale(0)</code>) и полная прозрачность (<code>opacity: 0</code>). Браузер автоматически рассчитал все промежуточные состояния, создав плавную анимацию исчезновения и удаления. Аналогично, для облаков были созданы анимации <code>float</code>, которые зацикленно изменяли их положение по горизонтали, создавая эффект медленного дрейфа по небу.</p>
+        
+        <p>Для создания ощущения глубины и объема мы активно использовали слои и свойство <code>z-index</code>. Разместив фон, елку и облака на разных уровнях по оси Z, и заставив их двигаться с разной скоростью (облака плывут, а фон статичен), мы добились эффекта параллакса. Этот прием обманывает зрительное восприятие, создавая иллюзию трехмерного пространства. Кроме того, чтобы обеспечить корректную работу интерактивности, для верхних слоев, таких как облака, было применено свойство <code>pointer-events: none</code>. Это сделало их "прозрачными" для мыши, позволяя событиям <code>:hover</code> и <code>:active</code> беспрепятственно достигать основного контейнера сцены. Данный проект наглядно доказывает, что современный CSS — это не просто инструмент для стилизации, а мощнейшая декларативная система для создания производительных, аппаратно-ускоренных и визуально богатых интерактивных интерфейсов, способная решать многие задачи без привлечения более тяжеловесных технологий.</p>
+    </article>
 
-      <h2>Описание задачи</h2>
-      <p>
-        В рамках данного задания была поставлена цель создать статическое изображение, используя исключительно возможности HTML и CSS, без применения JavaScript или графических файлов. Этот метод, известный как "CSS Art", позволяет продемонстрировать глубокое понимание свойств CSS, таких как позиционирование, трансформации, градиенты и псевдоэлементы. Задача требовала не только технической точности в воссоздании объектов, но и творческого подхода к композиции и цветовой палитре.
-      </p>
-      <img src="H:\web prog\galaxy site\pics\2.png" alt="Пример галактики" style="width:30%; border-radius:10px; margin-bottom: 20px;">
-      <img src="../../pics/2.png" alt="Пример галактики" style="width:30%; border-radius:10px; margin-bottom:20px;">
-      <p>
-        Создание сложных форм, таких как чайник или изгибы стульев, требует комбинирования множества `div`-элементов, каждый из которых стилизуется для формирования части общего изображения. Например, для создания закругленных поверхностей активно использовалось свойство `border-radius`. Тени и объем достигались с помощью `box-shadow` и линейных градиентов (`linear-gradient`). Этот проект является отличной практикой для оттачивания навыков работы с визуальными аспектами CSS и развивает внимание к деталям.
-      </p>
+
 
       <h2>Результат выполнения</h2>
       <div class="assignment-container">
-        <!-- Твой оригинальный код рисунка -->
-        <!-- Твой оригнальный код рисунка -->
         <div class="card card--v4" aria-label="Сцена: луг и ёлка">
           <div class="scene">
             <img class="layer bg" src="img/bg-meadow.png" alt="Луг и небо">
-
-            <img class="layer tree" src="img/tree.png" alt="Ёлка">
+             <img class="layer tree" src="img/tree.png" alt="Ёлка">
 
             <img class="layer cloud cloud--1" src="img/cloud-1.png" alt="" aria-hidden="true">
             <img class="layer cloud cloud--2" src="img/cloud-2.png" alt="" aria-hidden="true">
@@ -120,58 +114,58 @@
             <img class="layer fox fox--near" src="img/fox-near.png" alt="Лиса">
             <img class="layer fox fox--far"  src="img/fox-far.png"  alt="" aria-hidden="true">
 
+            <img class="layer fox fox--far" src="img/fox-far.png" alt="" aria-hidden="true">
             <span class="label" aria-hidden="true"></span>
           </div>
         </div>
       </div>
     </div>
   </main>
-
-  
-  <!-- Важно! Также подключи свой основной app.js для работы мобильного меню -->
-  <script src="H:\web prog\galaxy site\app.js"></script>
-
- <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo">
-                            <div class="planet"></div>
-                            <div class="ring"></div>
-                        </div>
-                        <span class="logo-text">Космос Эксплорер</span>
-                    </div>
-                    <p>Портал исследования космоса и Вселенной</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Навигация</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Главная</a></li>
-                        <li><a href="#about">О космосе</a></li>
-                        <li><a href="#missions">Миссии</a></li>
-                        <li><a href="#solar-system">Солнечная система</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Материалы</h4>
-                    <ul class="footer-links">
-                        <li><a href="#assignments">Задания курса</a></li>
-                        <li><a href="#about">Факты о космосе</a></li>
-                        <li><a href="#missions">Космические программы</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Контакты</h4>
-                    <p>Санкт-Петербургский политехнический университет Петра Великого</p>
-                    <p>Курс: Верстка и прототипирование сайтов</p>
-                </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo">
+              <div class="planet"></div>
+              <div class="ring"></div>
             </div>
+            <span class="logo-text">Космос Эксплорер</span>
+          </div>
+          <p>Портал исследования космоса и Вселенной</p>
         </div>
+
+        <div class="footer-section">
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html#home">Главная</a></li>
+            <li><a href="../../index.html#about">О космосе</a></li>
+            <li><a href="../../index.html#missions">Миссии</a></li>
+            <li><a href="../../index.html#solar-system">Солнечная система</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Материалы</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html#assignments">Задания курса</a></li>
+            <li><a href="../../index.html#about">Факты о космосе</a></li>
+            <li><a href="../../index.html#missions">Космические программы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <p>Санкт-Петербургский политехнический университет Петра Великого</p>
+          <p>Курс: Верстка и прототипирование сайтов</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Космос Эксплорер. Все права защищены.</p>
+        <p>Создано для курса «Верстка и прототипирование сайтов»</p>
+      </div>
     </div>
   </footer>
 
