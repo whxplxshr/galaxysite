@@ -1,4 +1,4 @@
-// Mobile Menu Toggle
+// Мобильное меню
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -8,7 +8,7 @@ menuToggle.addEventListener('click', () => {
     mainNav.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Закрыть меню когда переходим по ссылке
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
@@ -16,7 +16,7 @@ navLinks.forEach(link => {
     });
 });
 
-// Add stars background animation
+// Бэкграунд звезды
 function createStars() {
     const starsContainer = document.createElement('div');
     starsContainer.className = 'stars-container';
@@ -45,7 +45,7 @@ function createStars() {
     document.body.insertBefore(starsContainer, document.body.firstChild);
 }
 
-// Add twinkle animation
+// Анимация звезд
 const style = document.createElement('style');
 style.textContent = `
     @keyframes twinkle {
