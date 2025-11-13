@@ -95,7 +95,7 @@ body {
 .tree:hover {
   animation: sway 2.4s ease-in-out infinite;
 }
-/
+
 .scene:active .label::after { content: "Отправляйся!"; }
 .scene:active .fox--near { opacity: 0; }
 .scene:active .fox--far  {
