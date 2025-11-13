@@ -738,7 +738,8 @@ select.form-control {
 }
 
 /* END PERPLEXITY DESIGN SYSTEM */
-/* Reset and Base Styles */
+
+/*Мои стили*/
 * {
     margin: 0;
     padding: 0;
@@ -763,7 +764,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header Styles */
+/*Хэдер*/
 .header {
     background: rgba(10, 10, 26, 0.95);
     backdrop-filter: blur(10px); 
@@ -783,7 +784,7 @@ body {
     padding: 15px 0;
 }
 
-/* CSS-only Logo */
+/* css логотип*/
 .logo-wrapper {
     display: flex;
     align-items: center;
@@ -855,7 +856,7 @@ body {
     text-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
 }
 
-/* Navigation */
+/* Навигация */
 .nav-list {
     display: flex;
     list-style: none; /* убираем маркеры списка */
@@ -892,7 +893,7 @@ body {
     width: 80%;
 }
 
-/* Mobile Menu Toggle */
+/* Меню мобилки */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -911,7 +912,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
+/* Главная секция */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -983,7 +984,7 @@ body {
     }
 }
 
-/* Button Styles */
+/* Кнопки */
 .btn {
     display: inline-block;
     padding: 15px 40px;
@@ -1007,7 +1008,7 @@ body {
     box-shadow: 0 8px 30px rgba(0, 200, 255, 0.6);
 }
 
-/* Section Styles */
+/* Стили секции */
 .section {
     padding: 100px 0;
     position: relative;
@@ -1033,7 +1034,7 @@ body {
     margin-right: auto;
 }
 
-/* Content Grid */
+/* Контент сетки */
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1071,7 +1072,7 @@ body {
     border: 2px solid rgba(0, 200, 255, 0.3);
 }
 
-/* Facts Grid */
+/* Сетка фактов о космосе */
 .facts-grid {
     margin-top: 80px;
 }
@@ -1114,7 +1115,7 @@ body {
     line-height: 1.6;
 }
 
-/* Missions Grid */
+/* Сетка миссий */
 .missions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1168,7 +1169,7 @@ body {
     color: #d0d0d0;
 }
 
-/* Planets Grid */
+/* Сетка планет */
 .planets-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1224,7 +1225,7 @@ body {
     color: #d0d0d0;
 }
 
-/* Planet-specific styles */
+/* css планеты */
 .mercury { border-color: #8c7853; }
 .mercury .planet-icon { background: radial-gradient(circle at 30% 30%, #b8a488, #6b5d4f); box-shadow: 0 0 30px #8c7853; }
 
@@ -1249,7 +1250,7 @@ body {
 .neptune { border-color: #4169e1; }
 .neptune .planet-icon { background: radial-gradient(circle at 30% 30%, #4169e1, #1e3a8a); box-shadow: 0 0 30px #4169e1; }
 
-/* Assignments Grid */
+/* сетка заданий */
 .assignments-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1380,7 +1381,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* Responsive Design */
+/* доп дизайн */
 @media (max-width: 968px) {
     .nav {
         position: fixed;
