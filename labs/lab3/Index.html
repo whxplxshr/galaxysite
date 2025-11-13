@@ -1,105 +1,71 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Вариант 2. Машины</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
 <!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Вариант 2. Машины</title>
+  <title>Лабораторная работа 3 — Вариант 2. Машины</title>
   <link rel="stylesheet" href="style.css" />
-  
-  <!-- 1. Подключаем основной стиль проекта -->
-  <link rel="stylesheet" href="H:\web prog\galaxy site\style.css"> 
-  
-  <!-- 2. Подключаем локальный стиль задания -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Основные стили проекта -->
+  <link rel="stylesheet" href="../../style.css" />
+  <!-- Локальные стили лабораторной -->
 
+  
   <style>
-    /* Стили для красивого оформления контента задания */
-    body {
-        /* Фон берется из основного style.css, эта строка для подстраховки */
-        background-color: #0b0f19;
-    }
-    .assignment-wrapper {
-        padding: 40px 20px;
-        max-width: 1200px;
-        margin: 40px auto;
-        background: rgba(10, 20, 40, 0.7);
-        border-radius: 10px;
-        color: #ddd;
-    }
-    .assignment-wrapper h1, .assignment-wrapper h2 {
-        color: #00c8ff;
-    }
-    .assignment-wrapper p {
-        line-height: 1.7;
-        margin-bottom: 20px;
-    }
-    .assignment-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-        border: 1px solid #2a3a5a;
-        border-radius: 10px;
-        background: #050a1a;
-        margin-top: 30px;
-        overflow: hidden;
+    
+    
+    main {
+      padding-bottom: 60px;
     }
   </style>
 </head>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Космос Эксплорер - Портал исследования космоса</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <!-- CSS Logo -->
-                <div class="logo-wrapper">
-                    <div class="logo">
-                        <div class="planet"></div>
-                        <div class="ring"></div>
-                    </div>
-                    <span class="logo-text">Космос Эксплорер</span>
-                </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <!-- Navigation -->
-                <nav class="nav" id="mainNav">
-                    <ul class="nav-list">
-                        <li><a href="#home" class="nav-link">Главная</a></li>
-                        <li><a href="#about" class="nav-link">О космосе</a></li>
-                        <li><a href="#missions" class="nav-link">Миссии</a></li>
-                        <li><a href="#solar-system" class="nav-link">Солнечная система</a></li>
-                        <li><a href="#assignments" class="nav-link">Задания</a></li>
-                    </ul>
-                </nav>
-            </div>
+   <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <div class="planet"></div>
+            <div class="ring"></div>
+          </div>
+          <span class="logo-text">Космос Эксплорер</span>
         </div>
-    </header>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a href="../../index.html#home" class="nav-link">Главная</a></li>
+            <li><a href="../../index.html#about" class="nav-link">О космосе</a></li>
+            <li><a href="../../index.html#missions" class="nav-link">Миссии</a></li>
+            <li><a href="../../index.html#solar-system" class="nav-link">Солнечная система</a></li>
+            <li><a href="../../index.html#assignments" class="nav-link">Задания</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
   <!-- Основной контент страницы -->
   <main class="app">
+    <article class="lab-essay">
+        <h1> . </h1>
+        <h1> ___________________________________________________________________________</h1>
+        <h1>  </h1>
+        <h2>Эссе для Лабораторной работы №2: Разработка интерактивного калькулятора на JavaScript</h2>
+        
+        <p>От визуального искусства, созданного статичными средствами, мы переходим к динамике и интерактивности, воплощенной в практическом веб-приложении. Данный проект представляет собой разработку функционального калькулятора расхода топлива, где основное внимание было уделено взаимодействию с пользователем и мгновенному отклику интерфейса. Целью работы было не просто решить математическую задачу, а создать удобный и интуитивно понятный инструмент, демонстрирующий ключевые принципы современной клиентской веб-разработки на JavaScript, где структура, представление и поведение четко разделены и работают в полной гармонии.</p>
+        
+        <p>Архитектура приложения начинается с семантически верной HTML-разметки, которая формирует его скелет. Для основного элемента управления — выбора количества топлива — был использован <code>&lt;input type="range"&gt;</code>, обеспечивающий тактильное и наглядное взаимодействие. Для отображения данных в режиме "Несколько пользователей" была выбрана классическая структура <code>&lt;table&gt;</code>, как наиболее подходящая для табличных данных. Пользовательские действия инициируются через элементы <code>&lt;button&gt;</code>, а выбор типа транспорта — через выпадающий список <code>&lt;select&gt;</code>. Важной деталью интерфейса стал тег <code>&lt;output&gt;</code>, напрямую связанный со слайдером, который позволил отображать его числовое значение в реальном времени, улучшая пользовательский опыт. Весь визуальный облик, от цветов кнопок до стилизации таблицы, был задан с помощью CSS, который изолирован от логики и отвечает исключительно за презентационный слой.</p>
+        
+        <p>Истинная жизнь в приложение была вдохнута с помощью JavaScript и его способности манипулировать объектной моделью документа (<strong>DOM</strong>). DOM представляет собой древовидную структуру всех HTML-элементов на странице, и JavaScript обладает полной властью над ней. Ключевым механизмом стали обработчики событий. Например, команда <code>fuelSlider.addEventListener('input', updateUserInterface)</code> позволила нам "слушать" событие перемещения ползунка и немедленно вызывать функцию для обновления интерфейса. Внутри этой функции мы получали текущее значение слайдера через свойство <code>.value</code> и присваивали его элементу <code>&lt;output&gt;</code>, создавая иллюзию мгновенной реакции. Основная бизнес-логика была инкапсулирована в чистые функции, такие как <code>function calculateFuel(distance, consumptionRate)</code>, что сделало код более читаемым, тестируемым и легко модифицируемым.</p>
+        
+        <p>Наиболее ярко мощь DOM-манипуляций проявилась в реализации функциональности "Несколько пользователей". При нажатии на кнопку "Добавить строку" JavaScript динамически создавал в памяти новые HTML-элементы: <code>document.createElement('tr')</code> для строки, <code>document.createElement('td')</code> для ячеек, и <code>document.createElement('input')</code> для полей ввода внутри них. Затем, с помощью метода <code>row.appendChild(cell)</code>, эти элементы собирались в единую строку, которая, в свою очередь, добавлялась в конец таблицы командой <code>tableBody.appendChild(row)</code>. Весь этот процесс происходит на стороне клиента, без единого запроса к серверу и перезагрузки страницы. Этот проект служит прекрасной демонстрацией того, как современный JavaScript позволяет создавать сложные, быстрые и отзывчивые веб-приложения, где пользовательский интерфейс живет и изменяется в ответ на каждое действие пользователя, обеспечивая богатый интерактивный опыт.</p>
+    </article>
     <h1>Вариант 2. Машины</h1>
     <p id="intro" class="lead"></p>
 
@@ -177,57 +143,54 @@
       </div>
     </section>
   </main>
-
-  
-  <!-- Важно! Также подключи свой основной app.js для работы мобильного меню -->
-  <script src="H:\web prog\galaxy site\app.js"></script>
-
- <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo">
-                            <div class="planet"></div>
-                            <div class="ring"></div>
-                        </div>
-                        <span class="logo-text">Космос Эксплорер</span>
-                    </div>
-                    <p>Портал исследования космоса и Вселенной</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Навигация</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Главная</a></li>
-                        <li><a href="#about">О космосе</a></li>
-                        <li><a href="#missions">Миссии</a></li>
-                        <li><a href="#solar-system">Солнечная система</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Материалы</h4>
-                    <ul class="footer-links">
-                        <li><a href="#assignments">Задания курса</a></li>
-                        <li><a href="#about">Факты о космосе</a></li>
-                        <li><a href="#missions">Космические программы</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Контакты</h4>
-                    <p>Санкт-Петербургский политехнический университет Петра Великого</p>
-                    <p>Курс: Верстка и прототипирование сайтов</p>
-                </div>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo">
+              <div class="planet"></div>
+              <div class="ring"></div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Космос Эксплорер. Все права защищены.</p>
-                <p>Создано для курса "Верстка и прототипирование сайтов"</p>
-            </div>
+            <span class="logo-text">Космос Эксплорер</span>
+          </div>
+          <p>Портал исследования космоса и Вселенной</p>
         </div>
-    </footer>
+
+        <div class="footer-section">
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html#home">Главная</a></li>
+            <li><a href="../../index.html#about">О космосе</a></li>
+            <li><a href="../../index.html#missions">Миссии</a></li>
+            <li><a href="../../index.html#solar-system">Солнечная система</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Материалы</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html#assignments">Задания курса</a></li>
+            <li><a href="../../index.html#about">Факты о космосе</a></li>
+            <li><a href="../../index.html#missions">Космические программы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <p>Санкт-Петербургский политехнический университет Петра Великого</p>
+          <p>Курс: Верстка и прототипирование сайтов</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Космос Эксплорер. Все права защищены.</p>
+        <p>Создано для курса «Верстка и прототипирование сайтов»</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="../../app.js"></script>
 </body>
 </html>
